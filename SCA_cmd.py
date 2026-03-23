@@ -18,3 +18,6 @@ with open(repo_name+".spdx.json") as f:
 # Step 4: extract package names for GitHub API lookup
 packages = [p["name"] for p in sbom["packages"]]
 print(packages)
+
+#test
+print("Hello")
