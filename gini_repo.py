@@ -5,6 +5,7 @@ Multi-repo CSV output, measures contribution inequality using commit counts per 
 Repositories are hardcoded in the REPOS list. Results are saved to gini_results.csv and printed in a summary table.
 
 Use /opt/anaconda3/bin/python gini_repo.py in terminal if anaconda is installed.
+Requires a GitHub token to avoid rate limits. Set TOKEN variable at the top of the script.
 
 """
 
@@ -13,7 +14,7 @@ import csv
 import requests
 from collections import defaultdict
 
-TOKEN = "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"
+TOKEN = ""
 REPOS = [
     "facebook/react",
     "scikit-learn/scikit-learn",
