@@ -1,0 +1,5 @@
+repo,gini,total_commits,total_contributors,top_author,top_author_commits,top_author_pct,top5_pct
+facebook/react,0.8858,21450,1973,sebmarkbage,1939,9.04,38.18
+scikit-learn/scikit-learn,0.8633,33502,3440,ogrisel,2568,7.67,27.72
+mastodon/mastodon,0.9189,21008,1080,Gargron,4229,20.13,61.74
+ClusterHQ/flocker,0.8552,19139,72,wallrj,3605,18.84,64.5
