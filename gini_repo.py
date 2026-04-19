@@ -14,15 +14,17 @@ import csv
 import requests
 from collections import defaultdict
 
-TOKEN = ""
+TOKEN = "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"
 REPOS = [
+    "mastodon/mastodon",
     "facebook/react",
     "scikit-learn/scikit-learn",
-    "mastodon/mastodon",
     "ClusterHQ/flocker",
+    "sandstorm-io/sandstorm",
+    "kubernetes/kubernetes",
 ]
 
-OUTPUT_FILE = "gini_results.csv"
+OUTPUT_FILE = "data/gini_results.csv"
 
 
 def get_contributors(owner: str, repo: str, token: str = None) -> dict:

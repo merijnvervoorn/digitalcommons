@@ -1,0 +1,7 @@
+repo,gini,total_commits,total_contributors,top_author,top_author_commits,top_author_pct,top5_pct
+mastodon/mastodon,0.9191,21069,1081,Gargron,4230,20.08,61.72
+facebook/react,0.8858,21467,1973,sebmarkbage,1939,9.03,38.15
+scikit-learn/scikit-learn,0.8633,33531,3444,ogrisel,2569,7.66,27.7
+ClusterHQ/flocker,0.8552,19139,72,wallrj,3605,18.84,64.5
+sandstorm-io/sandstorm,0.937,8225,115,kentonv,3680,44.74,83.72
+kubernetes/kubernetes,0.9046,136993,5234,k8s-ci-robot,26704,19.49,37.32
