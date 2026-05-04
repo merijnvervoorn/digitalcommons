@@ -160,9 +160,11 @@ footer img { width: 80px; }
 .hero-section {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 4rem;
   position: relative;
   overflow: hidden;
+  min-height: 90vh;
 }
 .hero-content {
   max-width: 50%;
@@ -175,7 +177,7 @@ footer img { width: 80px; }
 }
 .hero-graphic {
   position: absolute;
-  right: -5%;
+  right: -28%;
   top: 0;
   height: 100%;
   z-index: 1;
@@ -578,11 +580,17 @@ input[type=range]::-webkit-slider-thumb {
   .hero-section, .split-section, .case-section {
     flex-direction: column !important;
     padding: 2rem;
+    min-height: 60vh;
   }
   
   .hero-content, .split-image, .case-image { max-width: 100%; }
   
   .hero-content h1 { font-size: 2.5rem; }
+
+  .hero-graphic {
+    right: -60%; /* Pushes the image further off the right side */
+    opacity: 0.3; /* Optional: Lowers opacity so the text on top is easier to read */
+  }
   
   .split-content h2, .case-section h2 { font-size: 1.8rem; }
   
