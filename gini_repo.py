@@ -14,7 +14,7 @@ import csv
 import requests
 from collections import defaultdict
 
-TOKEN = "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"
+TOKEN = "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"
 REPOS = [
     "mastodon/mastodon",
     "facebook/react",
