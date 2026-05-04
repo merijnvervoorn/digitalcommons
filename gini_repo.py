@@ -22,6 +22,26 @@ REPOS = [
     "ClusterHQ/flocker",
     "sandstorm-io/sandstorm",
     "kubernetes/kubernetes",
+    "python/cpython",
+    "aws/aws-cdk",
+    "spring-projects/spring-boot",
+    "matrix-org/matrix-js-sdk",
+    "microsoft/vscode",
+    "git/git",
+    "rabbitmq/rabbitmq-server",
+    "jenkinsci/jenkins",
+    "docker/compose",
+    "aquasecurity/trivy",
+    "apache/spark",
+    "facebook/prophet",
+    "openai/codex",
+    "openai/symphony",
+    "MODSetter/SurfSense",
+    "JanDeDobbeleer/oh-my-posh",
+    "ariya/phantomjs",
+    "rethinkdb/rethinkdb",
+    "mozilla/persona",
+    "rkt/rkt"
 ]
 
 OUTPUT_FILE = "data/gini_results.csv"
