@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use the Commons - Simulator</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <!-- Same header structure -->
+        <div class="logo-container"><img src="static/images/logo-icon.png" alt="Logo"><span>Use the Commons</span></div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cases.html">Cases</a></li>
+            <li><a href="dependency.html">Dependency</a></li>
+            <li><a href="transition.html" class="nav-btn">Transition</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="sim-hero bg-cream">
+            <h1 style="color: var(--fern-green);">Commons Contribution<br><span style="color: var(--periwinkle);">Simulator</span></h1>
+            <p>Discover the minimum incentive level required to encourage firms to transition from free-riding to contributing. This data-driven simulation is calibrated using real GitHub contribution patterns and economic game theory.</p>
+            <a href="#simulator" class="btn btn-periwinkle" style="margin-top: 1rem;">Explore Simulation</a>
+        </section>
+
+        <section class="controls-section">
+            <div style="max-width: 1200px; margin: 0 auto;">
+                <h2>Adjust Variables & Run</h2>
+                <p style="margin-bottom: 2rem; font-size: 0.95rem;">Calibrated using real GitHub contribution data and economic models of cooperation</p>
+                
+                <div class="sim-grid">
+                    <div class="sim-card" style="background-color: rgba(255, 255, 255, 0.1); border: 2px solid var(--pistachio-green);">
+                        <h3>Simulation Parameters</h3>
+                        
+                        <div class="slider-group">
+                            <div class="slider-labels"><span>Incentive Level</span><span id="val-incentive" class="text-pistachio">56%</span></div>
+                            <input type="range" id="incentive" min="0" max="100" value="56" oninput="updateVal(this, '%')">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-labels"><span>Number of Firms</span><span id="val-firms" class="text-pistachio">48</span></div>
+                            <input type="range" id="firms" min="10" max="100" value="48" oninput="updateVal(this, '')">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-labels"><span>Starting Free-Rider Ratio</span><span id="val-freerider" class="text-pistachio">66%</span></div>
+                            <input type="range" id="freerider" min="0" max="100" value="66" oninput="updateVal(this, '%')">
+                        </div>
+                        <div class="slider-group">
+                            <div class="slider-labels"><span>Contribution Cost</span><span id="val-cost" class="text-pistachio">36%</span></div>
+                            <input type="range" id="cost" min="0" max="100" value="36" oninput="updateVal(this, '%')">
+                        </div>
+                        
+                        <button class="btn btn-pistachio" style="width: 100%; margin-top: 1.5rem; border-radius: 5px; font-size: 1rem;">▶ Run Simulation</button>
+                    </div>
+
+                    <div class="sim-card" style="background-color: rgba(255, 255, 255, 0.1); border: 2px solid var(--pistachio-green); display: flex; flex-direction: column;">
+                        <h3>Tipping Point Result</h3>
+                        <div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Minimum Incentive Required to Flip Behavior</p>
+                            <div style="background: var(--pistachio-green); width: 80%; height: 12px; margin: 1rem 0; border-radius: 6px;"></div>
+                            <p style="font-size: 2rem; font-weight: 900; color: var(--pistachio-green); margin: 1rem 0;">—</p>
+                            <p style="font-size: 0.9rem; color: rgba(255,255,255,0.9);">incentive units required</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="output-section-sim">
+            <h2 style="color: var(--espresso);">Simulation Visualization</h2>
+            <p style="color: var(--espresso); margin-bottom: 2rem; font-size: 0.95rem;">Share of contributing firms across simulation ticks</p>
+            
+            <div style="background: rgba(0, 0, 0, 0.15); height: 300px; border-radius: 8px; margin-bottom: 2rem;"></div>
+            
+            <div class="slider-labels" style="justify-content: center; gap: 2rem;">
+                <span style="color: var(--fern-green);">● Contributors</span>
+                <span style="color: #ff6b9d;">● Free-Riders</span>
+                <span style="color: var(--pistachio-green);">● Tipping Point</span>
+            </div>
+        </section>
+
+        <section class="how-it-works-section">
+            <h1 style="color: var(--periwinkle);">How the Simulation Works</h1>
+            <p style="max-width: 900px; margin-bottom: 2rem;">This agent-based model tests a fundamental question in cooperation theory: what incentive level is sufficient to encourage rational actors to shift from free-riding to contributing? The simulation is grounded in real data and economic theory.</p>
+            
+            <div class="how-it-works-grid">
+                <div class="step-card" style="background-color: var(--periwinkle); color: var(--white);">
+                    <h4 style="color: var(--pistachio-green);">Step 1 — Agents</h4>
+                    <p>Each agent represents a small firm. At every simulation tick, it decides whether to contribute to or free-ride on the digital commons based on its decision rule.</p>
+                    <div style="background: rgba(0,0,0,0.2); padding: 1rem; border-radius: 5px; margin-top: 1rem; font-size: 0.85rem;">
+                        <p><strong>Contribute if:</strong><br>Benefit(incentive) + Reputation > Cost</p>
+                        <br>
+                        <p><strong>Free-ride if:</strong><br>Benefit(free_ride) > Penalty</p>
+                    </div>
+                </div>
+                <div class="step-card" style="background-color: var(--pistachio-green); color: var(--espresso);">
+                    <h4 style="color: var(--fern-green);">Step 2 — Calibration</h4>
+                    <p>Decision rule weights are derived from empirical GitHub contribution data. Agent behavior reflects real open-source patterns observed in practice. The Contribution Gini index informs the starting distribution of contributors vs. free-riders.</p>
+                </div>
+                <div class="step-card" style="background-color: var(--fern-green); color: var(--white);">
+                    <h4 style="color: var(--pistachio-green);">Step 3 — Threshold Discovery</h4>
+                    <p>The simulation sweeps across incentive levels, running multiple parameter settings to identify the minimum incentive at which the majority rationally switch from free-riding to contributing. Rooted in Olson (1971): selective incentives drive cooperation.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wide-section bg-fern">
+            <h2 class="text-pistachio">Policy Implications</h2>
+            <p class="text-white" style="max-width: 900px;">This simulation demonstrates that free-riding is rational for most actors without sufficient incentives. However, governments and organizations can influence these incentives through:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; max-width: 900px;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
+                    <h3 class="text-pistachio">Tax Incentives</h3>
+                    <p class="text-white" style="font-size: 0.95rem;">Tax credits for companies that contribute to open-source projects make contributing more economically rational.</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
+                    <h3 class="text-pistachio">Public Procurement</h3>
+                    <p class="text-white" style="font-size: 0.95rem;">Government contracts favoring companies with strong open-source contributions create reputational incentives.</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
+                    <h3 class="text-pistachio">Funding Programs</h3>
+                    <p class="text-white" style="font-size: 0.95rem;">Direct funding to open-source projects increases the benefits of contributing and reduces the cost.</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 1.5rem; border-radius: 8px;">
+                    <h3 class="text-pistachio">Community Recognition</h3>
+                    <p class="text-white" style="font-size: 0.95rem;">Visibility and reputation within the open-source community matter. Public recognition amplifies intrinsic motivations.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            <img src="static/images/logo-icon.png" alt="Use the Commons">
+        </div>
+        <div>
+            <p>This playbook is meant to help you understand the commons model and act on it. Whether you are a policymaker looking for evidence-based arguments for commons investment, or a business trying to understand your relationship with open-source software, you will find tools, data, and guidance here to support your decisions. Our mission is simple: to make the case for the digital commons, and to give you everything you need to be part of building them.</p>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="cases.html">Cases</a>
+            <a href="dependency.html">Free-Riders</a>
+            <a href="simulator.html">Assessment</a>
+        </div>
+        <div>
+            <p><i>Use The Commons</i> is a project by Computational Social Science students at the University of Amsterdam in collaboration with Internet Society NL and the Open Systems Foundation.</p><br>
+            <p>Created by: Sean Almeida, Kavin 'Dave' Doowa, Alex Enache, Jacco Friedeberg, Gabriela Mahecha Califa & Merijn Vervoorn</p><br><br>
+            <p>(c) 2026 Use The Commons. Licensed under GNU General Public License v3.0</p>
+        </div>
+    </footer>
+
+    <script src="static/script.js"></script>
+    <script>
+        function updateVal(slider, symbol) {
+            document.getElementById('val-' + slider.id).innerText = slider.value + symbol;
+        }
+    </script>
+</body>
+</html>

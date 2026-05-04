@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use the Commons - Transition</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <!-- Same header structure -->
+        <div class="logo-container"><img src="static/images/logo-icon.png" alt="Logo"><span>Use the Commons</span></div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cases.html">Cases</a></li>
+            <li><a href="dependency.html">Dependency</a></li>
+            <li><a href="transition.html" class="nav-btn active">Transition</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="transition-hero">
+            <div class="section-number">01</div>
+            <h1>Transitioning to<br><span class="text-pistachio">Open Infrastructure</span></h1>
+            <p style="font-size: 1.1rem; max-width: 700px; margin-top: 1.5rem;">The path from proprietary to commons-based infrastructure is achieved through strategic changes in licensing and governance. Licensing is the key mechanism that defines access, control, and openness.</p>
+        </section>
+
+        <section class="transition-content">
+            <div class="section-number">02</div>
+            <h2>From Proprietary to Shared</h2>
+            <p>In proprietary systems, licenses restrict use, modification, and redistribution, keeping infrastructure closed and centrally controlled. The model prioritizes profit extraction over community benefit. As a result, development is siloed, innovation is limited to a single company, and the infrastructure remains vulnerable to corporate decisions.</p>
+            
+            <p>Open-source licenses work differently. They grant broad rights to use, study, modify, and share resources, effectively transforming closed systems into shared infrastructure. When organizations transition—like Ingres did in 2004—they replace exclusive licensing with frameworks allowing external developers to access and contribute. This shift enables distributed development, community innovation, and sustainable infrastructure.</p>
+        </section>
+
+        <section class="wide-section bg-fern">
+            <div class="section-number text-white">03</div>
+            <h2 class="text-pistachio">Understanding Open Licenses</h2>
+            <p class="text-white" style="font-size: 1.1rem; max-width: 900px; margin-bottom: 2rem;">The type of open license determines how "common" the infrastructure remains. Different licenses balance innovation with sustainability in different ways:</p>
+            
+            <div class="license-grid">
+                <div class="license-card">
+                    <h3>Copyleft Licenses</h3>
+                    <p><strong>(GPL, AGPL)</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Require that derivative works remain open-source. Prevent re-privatization and ensure the commons stays protected.</p>
+                </div>
+                <div class="license-card">
+                    <h3>Permissive Licenses</h3>
+                    <p><strong>(MIT, Apache 2.0)</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Allow reuse without requiring derived works to remain open. Maximize adoption but offer less protection.</p>
+                </div>
+                <div class="license-card">
+                    <h3>Source-Available</h3>
+                    <p><strong>(BSL, SSPL)</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Middle ground between proprietary and open. Source is visible but restrictions apply under certain conditions.</p>
+                </div>
+                <div class="license-card">
+                    <h3>Public Domain</h3>
+                    <p><strong>(CC0, Unlicense)</strong></p>
+                    <p style="margin-top: 0.5rem; font-size: 0.85rem;">Maximum freedom. No restrictions on use, allowing complete freedom but offering no reciprocal obligations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="transition-content">
+            <div class="section-number">04</div>
+            <h2>Licensing as Governance</h2>
+            <p>Licensing functions as a governance mechanism because it structures participation, defines rights and responsibilities, and enables digital infrastructures to operate as collectively maintained resources rather than privately controlled systems. When choosing a license, organizations fundamentally shape:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                <div style="background-color: var(--pistachio-green); padding: 1.5rem; border-radius: 10px; color: var(--espresso);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Who Can Participate</h3>
+                    <p>Permissive licenses welcome everyone. Copyleft licenses welcome contributors but require reciprocity. Restrictive licenses limit participation by design.</p>
+                </div>
+                <div style="background-color: var(--periwinkle); padding: 1.5rem; border-radius: 10px; color: var(--white);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">How Knowledge Flows</h3>
+                    <p>Open licenses enable knowledge sharing. Copyleft ensures improvements flow back. Proprietary licenses create silos where knowledge remains captured.</p>
+                </div>
+                <div style="background-color: var(--fern-green); padding: 1.5rem; border-radius: 10px; color: var(--white);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Long-term Sustainability</h3>
+                    <p>Commons thrive when reciprocity is built-in. Copyleft ensures this. Permissive licenses trust goodwill. Proprietary models depend on corporate survival.</p>
+                </div>
+                <div style="background-color: var(--cream); padding: 1.5rem; border-radius: 10px; color: var(--espresso); border: 2px solid var(--fern-green);">
+                    <h3 style="margin-bottom: 1rem; font-size: 1.2rem;">Commercial Viability</h3>
+                    <p>Open licenses don't prevent commercial use. Many companies build profitable services around open-source software while maintaining the commons.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="wide-section bg-pistachio">
+            <div class="section-number">05</div>
+            <h2 style="color: var(--fern-green);">Transitioning Your Infrastructure</h2>
+            <p style="max-width: 900px; margin-bottom: 2rem;">If you're considering transitioning proprietary infrastructure to open-source, licensing is your first decision. Consider:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+                <div style="background: rgba(0, 0, 0, 0.1); padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: var(--espresso); margin-bottom: 1rem;">1. Your Values</h4>
+                    <p style="color: var(--espresso);">Do you want to ensure derivative works remain open? Copyleft is for you. Prefer maximum freedom? Choose permissive.</p>
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.1); padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: var(--espresso); margin-bottom: 1rem;">2. Your Goals</h4>
+                    <p style="color: var(--espresso);">Do you want maximum adoption? Permissive licenses win. Seeking long-term sustainability? Copyleft builds reciprocal responsibility.</p>
+                </div>
+                <div style="background: rgba(0, 0, 0, 0.1); padding: 1.5rem; border-radius: 10px;">
+                    <h4 style="color: var(--espresso); margin-bottom: 1rem;">3. Your Timeline</h4>
+                    <p style="color: var(--espresso);">Early adoption matters. Choose a license aligned with your long-term vision and commit to it consistently.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <img src="static/images/logo-icon.png" alt="Use the Commons">
+        </div>
+        <div>
+            <p>This playbook is meant to help you understand the commons model and act on it. Whether you are a policymaker looking for evidence-based arguments for commons investment, or a business trying to understand your relationship with open-source software, you will find tools, data, and guidance here to support your decisions. Our mission is simple: to make the case for the digital commons, and to give you everything you need to be part of building them.</p>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="cases.html">Cases</a>
+            <a href="dependency.html">Free-Riders</a>
+            <a href="simulator.html">Assessment</a>
+        </div>
+        <div>
+            <p><i>Use The Commons</i> is a project by Computational Social Science students at the University of Amsterdam in collaboration with Internet Society NL and the Open Systems Foundation.</p><br>
+            <p>Created by: Sean Almeida, Kavin 'Dave' Doowa, Alex Enache, Jacco Friedeberg, Gabriela Mahecha Califa & Merijn Vervoorn</p><br><br>
+            <p>(c) 2026 Use The Commons. Licensed under GNU General Public License v3.0</p>
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Use the Commons - Dependency</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <header>
+        <!-- Same header structure -->
+        <div class="logo-container"><img src="static/images/logo-icon.png" alt="Logo"><span>Use the Commons</span></div>
+        <button class="hamburger" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="cases.html">Cases</a></li>
+            <li><a href="dependency.html" class="active">Dependency</a></li>
+            <li><a href="transition.html" class="nav-btn">Transition</a></li>
+        </ul>
+    </header>
+
+    <main>
+        <section class="dep-hero">
+            <h1 class="text-pistachio">Quantify Your<br><span class="text-white">Commons Dependency</span></h1>
+            <p>Understanding how much open-source software your organization depends on is the first step toward building a sustainable relationship with the digital commons.</p>
+        </section>
+
+        <section class="upload-section bg-pistachio">
+            <h2 class="text-espresso">Analyze Your Codebase</h2>
+            <p class="text-espresso" style="margin-bottom: 2rem;">Use our Software Composition Analysis (SCA) tool to automatically identify and value your open-source dependencies.</p>
+            <div class="upload-box">
+                <img src="static/images/upload-icon.png" alt="Upload">
+                <h3 class="text-espresso">Upload Your Dependency File</h3>
+                <p>Paste or upload your project dependencies (package.json, requirements.txt, Pipfile, etc.)</p>
+            </div>
+        </section>
+
+        <section class="output-section">
+            <h2 class="text-pistachio">What You'll Discover</h2>
+            <div class="output-grid">
+                <div class="output-card">
+                    <h3>Your Dependencies</h3>
+                    <div class="dep-row"><span>Miniconda</span><span>$500k</span></div>
+                    <div class="dep-row"><span>Cython</span><span>$2M</span></div>
+                    <div class="dep-row"><span>Joblib</span><span>$200k</span></div>
+                    <div class="dep-row"><span>Threadpoolctl</span><span>$50k</span></div>
+                    <div class="dep-row"><span>+ more...</span><span>...</span></div>
+                </div>
+                <div class="output-card">
+                    <h3>Value Extracted</h3>
+                    <div style="text-align: center; padding: 2rem 0;">
+                        <p style="font-size: 2.5rem; margin-bottom: 0.5rem;">$2.75M</p>
+                        <p style="font-size: 0.9rem; color: var(--pistachio-green);">Total estimated value</p>
+                        <p style="font-size: 0.85rem; margin-top: 1rem;">Calculated using COCOMO II model based on real GitHub contribution data</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="wide-section bg-cream">
+            <h2 style="font-size: 2.5rem; color: var(--fern-green); margin-bottom: 1.5rem;">How It Works</h2>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px;">
+                <div>
+                    <h3 style="color: var(--periwinkle); margin-bottom: 1rem; font-size: 1.3rem;">Step 1: Identify</h3>
+                    <p>A Software Composition Analysis (SCA) pipeline scans your codebase and produces a Software Bill of Materials (SBOM)—a complete list of all open-source dependencies your application uses.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--periwinkle); margin-bottom: 1rem; font-size: 1.3rem;">Step 2: Value</h3>
+                    <p>These dependencies are cross-referenced with our extracted GitHub contribution data. We calculate the development cost using the COCOMO II model to assign a tangible, monetary value.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--periwinkle); margin-bottom: 1rem; font-size: 1.3rem;">Step 3: Understand</h3>
+                    <p>The result is a clear picture of how much free value you're extracting from the commons, revealing the hidden cost of free-ridership and your organization's true dependency.</p>
+                </div>
+                <div>
+                    <h3 style="color: var(--periwinkle); margin-bottom: 1rem; font-size: 1.3rem;">Step 4: Act</h3>
+                    <p>Armed with this knowledge, you can make informed decisions about contributing back, supporting open-source projects, and building a sustainable relationship with the digital commons.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contribute-section">
+            <h2 style="color: var(--fern-green);">Now That You Know</h2>
+            <p style="max-width: 800px; color: var(--espresso); margin-bottom: 2rem;">Understanding your dependency on open-source is powerful. Most organizations don't realize the immense value they extract from the commons. Now that you do, let's explore how your organization can give back and ensure the sustainability of the projects you depend on.</p>
+            
+            <h3 style="color: var(--fern-green); margin-top: 3rem; margin-bottom: 1.5rem; font-size: 1.8rem;">Ways to Contribute</h3>
+            <div class="ways-to-contribute">
+                <div class="contribute-item">
+                    <img src="static/images/icon-money.png" alt="Donations">
+                    <h4 style="color: var(--fern-green);">Financial Support</h4>
+                    <p>Many open-source projects are maintained by non-profits and depend on donations from companies and individuals. Even small contributions help sustain the projects you rely on.</p>
+                </div>
+                <div class="contribute-item">
+                    <img src="static/images/icon-brain.png" alt="Knowledge">
+                    <h4 style="color: var(--fern-green);">Contribute Skills</h4>
+                    <p>Open-source projects need developers, designers, writers, and maintainers. By contributing your expertise, you directly improve the infrastructure you depend on.</p>
+                </div>
+                <div class="contribute-item">
+                    <img src="static/images/icon-megaphone.png" alt="Advocacy">
+                    <h4 style="color: var(--fern-green);">Advocate & Promote</h4>
+                    <p>Spread awareness about the digital commons. Support policy changes that recognize and fund open-source infrastructure at local and global levels.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <img src="static/images/logo-icon.png" alt="Use the Commons">
+        </div>
+        <div>
+            <p>This playbook is meant to help you understand the commons model and act on it. Whether you are a policymaker looking for evidence-based arguments for commons investment, or a business trying to understand your relationship with open-source software, you will find tools, data, and guidance here to support your decisions. Our mission is simple: to make the case for the digital commons, and to give you everything you need to be part of building them.</p>
+        </div>
+        <div class="footer-nav">
+            <a href="index.html">Home</a>
+            <a href="cases.html">Cases</a>
+            <a href="dependency.html">Free-Riders</a>
+            <a href="simulator.html">Assessment</a>
+        </div>
+        <div>
+            <p><i>Use The Commons</i> is a project by Computational Social Science students at the University of Amsterdam in collaboration with Internet Society NL and the Open Systems Foundation.</p><br>
+            <p>Created by: Sean Almeida, Kavin 'Dave' Doowa, Alex Enache, Jacco Friedeberg, Gabriela Mahecha Califa & Merijn Vervoorn</p><br><br>
+            <p>(c) 2026 Use The Commons. Licensed under GNU General Public License v3.0</p>
+        </div>
+    </footer>
+    <script src="static/script.js"></script>
+</body>
+</html>
