@@ -53,10 +53,24 @@ a {
   cursor: pointer;
   border: none;
   text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.btn:active {
+  transform: translateY(-1px);
 }
 .btn-periwinkle { background-color: var(--periwinkle); color: var(--white); }
+.btn-periwinkle:hover { background-color: #6a6d99; box-shadow: 0 8px 16px rgba(118, 123, 168, 0.4); }
 .btn-outline-pistachio { background-color: transparent; border: 2px solid var(--pistachio-green); color: var(--pistachio-green); }
+.btn-outline-pistachio:hover { background-color: var(--pistachio-green); color: var(--espresso); }
 .btn-pistachio { background-color: var(--pistachio-green); color: var(--espresso); }
+.btn-pistachio:hover { background-color: #9bc000; box-shadow: 0 8px 16px rgba(179, 212, 98, 0.4); }
 
 /* --- Header --- */
 header {
@@ -147,6 +161,13 @@ footer {
   gap: 2rem;
   font-size: 0.85rem;
 }
+footer a {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+footer a:hover {
+  color: var(--pistachio-green);
+  text-decoration: underline;
+}
 footer img { width: 80px; }
 .footer-nav {
   display: flex;
@@ -164,7 +185,7 @@ footer img { width: 80px; }
   padding: 4rem;
   position: relative;
   overflow: hidden;
-  min-height: 90vh;
+  min-height: 88vh;
 }
 .hero-content {
   max-width: 50%;
@@ -177,9 +198,8 @@ footer img { width: 80px; }
 }
 .hero-graphic {
   position: absolute;
-  right: -28%;
-  top: 0;
-  height: 100%;
+  right: -20%;
+  height: 90%;
   z-index: 1;
 }
 
@@ -302,6 +322,28 @@ input[type=range]::-webkit-slider-thumb {
   border-radius: 50%;
   background: var(--white);
   cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+input[type=range]::-webkit-slider-thumb:hover {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+input[type=range]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--white);
+  cursor: pointer;
+  border: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+input[type=range]::-moz-range-thumb:hover {
+  width: 18px;
+  height: 18px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .how-it-works-grid {
